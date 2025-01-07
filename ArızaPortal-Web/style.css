@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding-top: 70px;
+}
+
+/* Navbar Stilleri */
+.navbar {
+    background: #2c3e50;
+    padding: 0.5rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.navbar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-links a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    background: #34495e;
+    color: #3498db;
+}
+
+.nav-links a.active {
+    background: #3498db;
+    color: #fff;
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: #fff;
+}
+
+.user-info {
+    font-size: 0.95rem;
+    color: #ecf0f1;
+}
+
+.logout-btn {
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 1024px) {
+    .navbar-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    .user-menu {
+        margin-top: 1rem;
+    }
+}
+
+/* Ana içerik için padding */
+body {
+    padding-top: 70px;
+}
+
+/* Form container margin düzeltmesi */
+.content-container {
+    margin-top: 2rem;
+}
+
+/* İçerik Stilleri */
+.content-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.content-container h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.content-container p {
+    color: #6c757d;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #45a049;
+}
+
+/* Form Stilleri */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76,175,80,0.2);
+}
+
+.submit-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+/* Başlık Stilleri */
+h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.menu-button {
+    aspect-ratio: 1;
+    padding: 20px;
+    font-size: 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-button i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+    color: #4CAF50;
+}
+
+.menu-button span {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.menu-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    background-color: #4CAF50;
+    color: white;
+}
+
+.menu-button:hover i {
+    color: white;
+}
+
+/* Ana sayfa menü grid stilleri */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background: #f8f9fa;
+}
+
+.menu-icon {
+    background: #3498db;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.menu-text {
+    flex-grow: 1;
+}
+
+.menu-text h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
+    color: #2c3e50;
+}
+
+.menu-text p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Her kategori için özel renkler */
+.menu-card:nth-child(1) .menu-icon { background: #3498db; }  /* Bilgisayar */
+.menu-card:nth-child(2) .menu-icon { background: #2ecc71; }  /* Yazıcı/Tarayıcı */
+.menu-card:nth-child(3) .menu-icon { background: #e74c3c; }  /* Ağ Cihazı */
+.menu-card:nth-child(4) .menu-icon { background: #f39c12; }  /* Kamera */
+.menu-card:nth-child(5) .menu-icon { background: #9b59b6; }  /* Telefon/Santral */
+.menu-card:nth-child(6) .menu-icon { background: #1abc9c; }  /* Logo */
+
+/* Responsive tasarım için ek düzenlemeler */
+@media (max-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card {
+        padding: 1rem;
+    }
+
+    .menu-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+} 

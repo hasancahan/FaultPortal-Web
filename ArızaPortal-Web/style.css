@@ -40,75 +40,106 @@ body {
     letter-spacing: 0.5px;
 }
 
-.nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 0.5rem;
+/* Açılır menü stilleri */
+.nav-menu {
+    position: relative;
 }
 
-.nav-links a {
-    color: #ecf0f1;
+.menu-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.menu-toggle:hover {
+    background: #34495e;
+    border-radius: 4px;
+}
+
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    min-width: 200px;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    list-style: none;
+}
+
+.nav-dropdown.show {
+    display: block;
+}
+
+.nav-dropdown li a {
+    color: #333;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
+    display: block;
+    transition: background 0.3s;
 }
 
-.nav-links a:hover {
-    background: #34495e;
-    color: #3498db;
+.nav-dropdown li a:hover {
+    background: #f5f5f5;
 }
 
-.nav-links a.active {
-    background: #3498db;
-    color: #fff;
+.nav-dropdown li a.active {
+    background: #4CAF50;
+    color: white;
 }
 
+/* Kullanıcı menü stilleri */
 .user-menu {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: #fff;
 }
 
 .user-info {
-    font-size: 0.95rem;
     color: #ecf0f1;
+    font-size: 0.95rem;
 }
 
 .logout-btn {
     background: #e74c3c;
-    color: #fff;
+    color: white;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     cursor: pointer;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: background 0.3s;
 }
 
 .logout-btn:hover {
     background: #c0392b;
 }
 
-/* Responsive Tasarım */
-@media (max-width: 1024px) {
+/* Responsive tasarım */
+@media (max-width: 768px) {
     .navbar-container {
-        flex-direction: column;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: 1rem 0;
+    .nav-brand {
+        font-size: 1.1rem;
     }
 
-    .user-menu {
-        margin-top: 1rem;
+    .menu-toggle {
+        padding: 0.4rem 0.8rem;
+    }
+
+    .user-info {
+        display: none; /* Mobilde sadece çıkış butonu görünsün */
     }
 }
 

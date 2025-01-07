@@ -111,6 +111,52 @@ app.post('/api/login', async (req, res) => {
     }
 });
 
+// Register endpoint'i
+app.post('/api/register', async (req, res) => {
+    try {
+        const { username, password, fullName, department } = req.body;
+
+        // Kullanıcı adının benzersiz olup olmadığını kontrol et
+        const { data: existingUser, error: checkError } = await supabase
+            .from('users')
+            .select('username')
+            .eq('username', username)
+            .single();
+
+        if (existingUser) {
+            return res.status(400).json({
+                success: false,
+                message: 'Bu kullanıcı adı zaten kullanılıyor'
+            });
+        }
+
+        // Yeni kullanıcıyı kaydet
+        const { data, error } = await supabase
+            .from('users')
+            .insert([
+                {
+                    username,
+                    password, // Gerçek uygulamada şifre hashlenmelidir!
+                    full_name: fullName,
+                    department
+                }
+            ]);
+
+        if (error) throw error;
+
+        res.json({
+            success: true,
+            message: 'Kayıt başarılı'
+        });
+    } catch (err) {
+        res.status(500).json({
+            success: false,
+            message: 'Kayıt işlemi başarısız',
+            error: err.message
+        });
+    }
+});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server ${PORT} portunda çalışıyor`);

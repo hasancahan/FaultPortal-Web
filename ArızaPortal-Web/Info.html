@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal - Bilgi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="navbar.js"></script>
+    <style>
+        .info-section {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .info-section h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .tech-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tech-item i {
+            color: #4CAF50;
+        }
+
+        .version-info {
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h2>Uygulama Bilgileri</h2>
+        <p>Arıza Portal uygulaması hakkında teknik bilgiler ve detaylar.</p>
+
+        <div class="info-section">
+            <h3>Kullanılan Teknolojiler</h3>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class="fab fa-html5"></i>
+                    <div>
+                        <div>HTML5</div>
+                        <div class="version-info">Frontend yapısı</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt"></i>
+                    <div>
+                        <div>CSS3</div>
+                        <div class="version-info">Stil ve tasarım</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js"></i>
+                    <div>
+                        <div>JavaScript</div>
+                        <div class="version-info">Frontend işlevsellik</div>
+                    </div>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-node-js"></i>
+                    <div>
+                        <div>Node.js & Express</div>
+                        <div class="version-info">Backend sunucu</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>Veritabanı Bilgileri</h3>
+            <p>Uygulama Supabase veritabanı altyapısını kullanmaktadır.</p>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class="fas fa-database"></i>
+                    <div>
+                        <div>Supabase</div>
+                        <div class="version-info">PostgreSQL tabanlı</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h3>Tablolar</h3>
+            <ul>
+                <li><strong>users</strong> - Kullanıcı bilgileri</li>
+                <li><strong>bildirimler</strong> - Arıza bildirimleri</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h3>API Endpoint'leri</h3>
+            <ul>
+                <li><code>/api/login</code> - Kullanıcı girişi</li>
+                <li><code>/api/bildirim</code> - Arıza bildirimi kaydetme</li>
+                <li><code>/test</code> - Veritabanı bağlantı testi</li>
+            </ul>
+        </div>
+
+        <div class="info-section">
+            <h3>Güvenlik</h3>
+            <ul>
+                <li>CORS politikası ile güvenli erişim</li>
+                <li>Oturum yönetimi için localStorage kullanımı</li>
+                <li>Supabase güvenlik politikaları</li>
+            </ul>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</body>
+</html> 
